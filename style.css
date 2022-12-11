@@ -1,0 +1,197 @@
+:root {
+  --primary: #118ea7;
+  --secondary: #5bc2d6;
+  --dark: #042025;
+  --light: #fbfdfd;
+  --alert: #e63946;
+  --success: #76ab21;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--light);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/* login page style start  */
+.app-title {
+  text-transform: uppercase;
+  font-size: 40px;
+  padding: 5rem;
+  color: var(--primary);
+  text-shadow: 2px 2px 3px var(--secondary);
+}
+
+.login-section {
+  background-color: inherit;
+  border: 1px solid var(--secondary);
+  padding: 2rem;
+}
+
+.login-section h2 {
+  font-size: 30px;
+  padding-bottom: 2rem;
+  color: var(--primary);
+}
+
+.login-section input {
+  font-size: 18px;
+  color: var(--dark);
+  padding: 7px 10px;
+  border: 0;
+  border: 1px solid var(--secondary);
+  outline: none;
+}
+
+.login-section input[type=submit] {
+  background-color: var(--primary);
+  color: var(--light);
+  border: 1px solid var(--primary);
+  padding: 7px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.linebreak { flex-basis: 100%; }
+/* login page style end  */
+
+/* todo list page style  start*/
+.welcome {
+  text-transform: capitalize;
+  font-size: 30px;
+  padding: 5rem;
+  color: var(--primary);
+  text-shadow: 2px 2px 3px var(--secondary);
+}
+
+.go-back {
+  font-size: 16px;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+/* todo add form style start  */
+.add-form { align-items: center; }
+
+.add-form label {
+  font-size: 18px;
+  color: var(--primary);
+}
+
+.add-form input[type=text], select, textarea {
+  width: 100%;
+  font-size: 18px;
+  padding: 12px;
+  border: 1px solid var(--secondary);
+  margin-top: 10px;
+  margin-bottom: 20px;
+  resize: vertical;
+  outline: none;
+}
+.add-form textarea { height: 100px; }
+
+.add-form input[type=submit] {
+  background-color: var(--primary);
+  font-size: 18px;
+  color: var(--light);
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+/* todo add form style end */
+
+.todo-list {
+  display: grid;
+  margin: 70px 0 50px 0;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+.todo-list div {
+  border: 1px solid var(--secondary);
+  background-color: var(--light);
+  padding: 2rem;
+  display: grid;
+  min-width: 720px;
+  gap: 3px;
+}
+
+.todo-list div .todo-title {
+  border: none;
+  outline: none;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--primary);
+  border-bottom: 1px solid var(--secondary);
+}
+
+.todo-list div input[type="text"] { min-width: 600px; }
+.todo-list div .checked { color: var(--success); }
+.todo-list div .not-checked { color: var(--primary); }
+
+.todo-list div .todo-description {
+  border: none;
+  outline: none;
+  margin-top: 5px;
+  font-size: 18px;
+  color: var(--primary);
+  resize: none;
+}
+
+.todo-list div input[type="checkbox"] {
+  height: 15px;
+  width: 15px;
+  accent-color: var(--success);
+  cursor: pointer;
+}
+
+.todo-list div .options {
+  margin-top: 20px;
+  color: var(--primary);
+  justify-self: left;
+  display: flex;
+  gap: 20px;
+}
+.todo-list .options i { 
+  font-size: 20px;
+  cursor: pointer; 
+}
+
+.todo-list .options .edit {
+  color: var(--primary);
+  cursor: pointer;
+  border: none;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.todo-list .options .save {
+  color: var(--success);
+  cursor: pointer;
+  border: none;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.no-todo {
+  font-size: 30px;
+  color: var(--alert);
+}
+/* todo list page style end */
+
+::placeholder { color: var(--secondary); opacity: 1; }
+:-ms-input-placeholder { color: var(--secondary); }
+::-ms-input-placeholder { color: var(--secondary); }
